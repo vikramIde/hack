@@ -6,7 +6,6 @@ import fetch from "node-fetch";
 Vue.use(Router);
 
 const router = new Router({
-  mode: "history",  
   routes: [
     {
       path: "/",
@@ -49,7 +48,7 @@ const router = new Router({
       component: () => import(/* webpackChunkName: "adminLogin" */ './views/AdminLogin.vue'),
     },
     {
-      path: "/app/admin/dashboard",
+      path: "#/app/admin/dashboard",
       name: "Dashboard",
       component: () => import(/* webpackChunkName: "dashboard" */ './views/Dashboard.vue') ,
       meta: {
